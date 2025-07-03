@@ -7,17 +7,18 @@ public class MenuForm extends JFrame {
     private JButton registroButton;
     private JButton ventasButton;
     private JButton verProductosButton;
-    private JLabel txtUsuario;
 
-    public MenuForm(String usuario){
+    public String codigo, nombre, detalle;
+    public double precioUnitario;
+    public int stock;
+
+    public MenuForm(Producto producto){
         setTitle("Menú de Opciones");
-        setSize(300,200);
+        setSize(400,300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setContentPane(menuPanel);
         setVisible(true);
-
-        txtUsuario.setText(usuario);
 
 
         registroButton.addActionListener(new ActionListener() {
@@ -31,7 +32,7 @@ public class MenuForm extends JFrame {
         ventasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FacturaForm();
+                new FacturaForm(codigo,nombre,detalle,precioUnitario,stock);
                 dispose();
             }
         });

@@ -33,9 +33,17 @@ public class LoginForm extends JFrame{
 
                 if (usuario.equals("galeas") && contrasenia.equals("esfot123")){
                     JOptionPane.showMessageDialog(null,"ACCESO CONCEDIDO");
-                    new MenuForm(usuario);
+                    new MenuForm();
                     dispose();
                 }
+            }
+        });
+
+        limpiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                usuarioField.setText("");
+                contraseniaField.setText("");
             }
         });
     }
