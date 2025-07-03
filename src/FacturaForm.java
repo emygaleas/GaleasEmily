@@ -33,15 +33,8 @@ public class FacturaForm extends JFrame{
                 }
 
                 try {
-                    productoInfo.setText(producto);
-                    precioInfo.setText(String.valueOf(precio));
                     int cantidadP = Integer.parseInt(cantidad);
-                    if (cantidadP<= stock && codigo.equals(codigoP)){
-                        double iva = 0.15;
-                        double subtotal = precio * iva;
-                        double total = subtotal + precio;
-                        subtotalC.setText(String.format("%.2f",subtotal));
-                        totalC.setText(String.format("%.2f",total));
+                    if (cantidadP>0){
                         return;
                     }
                 }catch (NumberFormatException ex){
