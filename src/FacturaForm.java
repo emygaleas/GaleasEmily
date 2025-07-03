@@ -13,7 +13,7 @@ public class FacturaForm extends JFrame{
     private JLabel totalC;
     private JLabel precioInfo;
 
-    public FacturaForm(String codigoP, String producto, String detalle, double precio, int stock){
+    public FacturaForm(){
         setTitle("Registrar Producto");
         setSize(300,200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -54,7 +54,7 @@ public class FacturaForm extends JFrame{
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MenuForm(Producto producto);
+                new MenuForm();
                 dispose();
             }
         });

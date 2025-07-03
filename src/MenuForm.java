@@ -12,7 +12,7 @@ public class MenuForm extends JFrame {
     public double precioUnitario;
     public int stock;
 
-    public MenuForm(Producto producto){
+    public MenuForm(){
         setTitle("Menú de Opciones");
         setSize(400,300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -32,7 +32,7 @@ public class MenuForm extends JFrame {
         ventasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FacturaForm(codigo,nombre,detalle,precioUnitario,stock);
+                new FacturaForm();
                 dispose();
             }
         });

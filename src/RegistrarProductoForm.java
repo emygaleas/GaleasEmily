@@ -43,7 +43,7 @@ public class RegistrarProductoForm extends JFrame{
                     if ((precioPD>0 && precioPD<9999.99) && (stockPI>0 && stockPI<999)){
                         JOptionPane.showMessageDialog(null,"Producto agregado correctamente.");
                         Producto p = new Producto(codigoP,nombreP,detalleP,precioPD,stockPI);
-                        new MenuForm(Producto);
+                        new MenuForm();
                         dispose();
                     }else{
                         JOptionPane.showMessageDialog(null,"Ingrese valores válidos.");
